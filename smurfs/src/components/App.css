@@ -1,3 +1,16 @@
 .App {
   text-align: center;
 }
+
+.smurfCard{
+  width:200px;
+  height:200px;
+  background-color: aquamarine;
+  border: black 2px solid;
+
+}
+.smurfCardSection{
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+}

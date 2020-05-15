@@ -2,7 +2,7 @@ import React, {useState , useEffect} from "react";
 import "./App.css";
 import axios from 'axios';
 import {SmurfContext} from '../contexts';
-import SmurfList from './SmurfList';
+import {SmurfList} from './SmurfList';
 
 
 
@@ -23,10 +23,13 @@ export default function App() {
 
     return (
       <div className="App">
-      
-      <SmurfContext.Provider value={smurfs}> 
-        {smurfs &&  <SmurfList/>}
-      </SmurfContext.Provider>
+        <section>
+          <h1>List of Smurfs</h1>
+          {/* <SmurfForm/> */}
+        </section>
+          <SmurfContext.Provider value={smurfs}> 
+            {smurfs &&  <SmurfList/>}
+          </SmurfContext.Provider>
       </div>
     );
   }
