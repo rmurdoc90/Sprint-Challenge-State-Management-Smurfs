@@ -1,10 +1,29 @@
 import React, {useState} from 'react';
+import axios from 'axios';
 
 export const SmurfForm = () => {
     const [newNameText, setNewNameText] = useState('');
     const [newAgeText, setNewAgeText] = useState('');
     const [newHeightText, setNewHeightText] = useState('');
     
+    const postingData = () => {
+        
+            axios
+            .post('http://localhost:3333/smurfs', {
+                name:newNameText,
+                age:newAgeText,
+                height:newHeightText
+            })
+            .then(res =>{
+                console.log(res)
+            })
+            .catch(err=>{
+                console.log(err)
+            })
+        
+        }
+    
+
     console.log(newNameText)
     console.log(newAgeText)
     console.log(newHeightText)
@@ -53,7 +72,7 @@ export const SmurfForm = () => {
 
             />
         </div>
-        <button>Submit</button>
+        <button onClick={postingData}>Submit</button>
      </>   
     )
 

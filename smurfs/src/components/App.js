@@ -26,9 +26,11 @@ export default function App() {
       <div className="App">
         <section>
           <h1>Smurfs</h1>
-          <SmurfForm/>
-        </section>
-          <SmurfContext.Provider value={smurfs}> 
+          </section>
+          
+        
+          <SmurfContext.Provider  value={smurfs}> 
+            <SmurfForm />
             {smurfs &&  <SmurfList/>}
           </SmurfContext.Provider>
       </div>
