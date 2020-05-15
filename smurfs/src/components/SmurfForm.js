@@ -24,9 +24,7 @@ export const SmurfForm = () => {
         }
     
 
-    console.log(newNameText)
-    console.log(newAgeText)
-    console.log(newHeightText)
+  
 
     const handleNameChanges = e =>{
         setNewNameText(e.target.value)
@@ -46,7 +44,7 @@ export const SmurfForm = () => {
            type="text"
            name='newNameText'
            value={newNameText}
-           onChange={(handleNameChanges)}
+           onChange={handleNameChanges}
 
             />
         </div>

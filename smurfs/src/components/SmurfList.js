@@ -4,7 +4,7 @@ import {SmurfContext} from '../contexts';
 export const SmurfList = () => {
     
     const smurfy = useContext(SmurfContext)
-    console.log(smurfy)
+
 
     return (
         <section className='smurfCardSection'>

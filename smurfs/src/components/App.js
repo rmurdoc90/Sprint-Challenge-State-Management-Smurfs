@@ -15,20 +15,17 @@ export default function App() {
   .get('http://localhost:3333/smurfs')
   .then(res =>{
     setSmurfs(res.data)
-    console.log(res.data)
   })
   .catch(err=>{
     console.log(err)
   })
-}, [])
+}, [smurfs])
 
     return (
       <div className="App">
         <section>
           <h1>Smurfs</h1>
           </section>
-          
-        
           <SmurfContext.Provider  value={smurfs}> 
             <SmurfForm />
             {smurfs &&  <SmurfList/>}
