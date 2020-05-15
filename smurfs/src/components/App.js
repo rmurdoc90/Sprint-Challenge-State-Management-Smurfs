@@ -3,6 +3,7 @@ import "./App.css";
 import axios from 'axios';
 import {SmurfContext} from '../contexts';
 import {SmurfList} from './SmurfList';
+import {SmurfForm} from './SmurfForm';
 
 
 
@@ -24,8 +25,8 @@ export default function App() {
     return (
       <div className="App">
         <section>
-          <h1>List of Smurfs</h1>
-          {/* <SmurfForm/> */}
+          <h1>Smurfs</h1>
+          <SmurfForm/>
         </section>
           <SmurfContext.Provider value={smurfs}> 
             {smurfs &&  <SmurfList/>}
